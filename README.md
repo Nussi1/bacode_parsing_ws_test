@@ -49,4 +49,3 @@ To run the unit tests, use the following command:
 
 ```bash
 pytest
-

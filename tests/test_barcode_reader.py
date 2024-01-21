@@ -1,7 +1,10 @@
 import os
+
 import pytest
-from src.barcode_reader import BarcodeReader
+
 from config import properties
+from src.barcode_reader import BarcodeReader
+
 
 def test_compare_extracted_text_with_file_content():
     # Expected result

@@ -1,10 +1,12 @@
 import os
 
-import PyPDF2
 import cv2
+import PyPDF2
 from PyPDF2 import PdfReader
 from pyzbar.pyzbar import decode
+
 from config import properties
+
 
 class BarcodeReader:
     def __init__(self, pdf_path, output_file_name):
