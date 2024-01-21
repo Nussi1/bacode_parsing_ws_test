@@ -16,7 +16,7 @@ The project is organized as follows:
 
     ```bash
     git clone https://github.com/Nussi1/bacode_parsing_ws_test.git
-    cd barcode_reader_testing_project
+    cd bacode_parsing_ws_test
     ```
 
 2. Install the required dependencies:
@@ -48,5 +48,5 @@ The results will be displayed in the console.
 To run the unit tests, use the following command:
 
 ```bash
-pytest
+python3 -m pytest
 
