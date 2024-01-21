@@ -15,7 +15,7 @@ The project is organized as follows:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Nussi1/qa_bacode_parsing.git
+    git clone https://github.com/Nussi1/bacode_parsing_ws_test.git
     cd barcode_reader_testing_project
     ```
 
@@ -48,4 +48,5 @@ The results will be displayed in the console.
 To run the unit tests, use the following command:
 
 ```bash
-python -m unittest discover -s tests
+pytest
+
