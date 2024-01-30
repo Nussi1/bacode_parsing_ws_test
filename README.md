@@ -48,5 +48,4 @@ The results will be displayed in the console.
 To run the unit tests, use the following command:
 
 ```bash
-python3 -m pytest
-
+pytest
