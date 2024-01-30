@@ -1,8 +1,12 @@
 import os
+import sys
 
 import pytest
 
-from config import properties
+root_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, root_dir)
+
+from config import Properties
 from src.barcode_reader import BarcodeReader
 
 
@@ -31,14 +35,12 @@ def test_compare_extracted_text_with_file_content():
     }
 
     # Create an instance of BarcodeReader
-    barcode_reader = BarcodeReader(properties.TEST_TASK, properties.EXTRACTED_TEXT_FILE)
+    barcode_reader = BarcodeReader(Properties.TEST_TASK, Properties.EXTRACTED_TEXT_FILE)
     barcode_reader.extract_text_from_pdf()
 
-    # Check the existence of the file
-    assert os.path.exists(properties.EXTRACTED_TEXT_FILE)
-
+    print("File Path:", os.path.abspath(Properties.EXTRACTED_TEXT_FILE))
     # Extract text from the file
-    with open(properties.EXTRACTED_TEXT_FILE, "r", encoding="utf-8") as file:
+    with open(Properties.EXTRACTED_TEXT_FILE, "r", encoding="utf-8") as file:
         extracted_text_content = file.read()
 
     # Debugging prints

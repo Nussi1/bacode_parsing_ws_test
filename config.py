@@ -1,6 +1,7 @@
-class Properties:
-    TEST_TASK = "data/test_task.pdf"
-    OUTPUT_FOLDER = "data"
-    EXTRACTED_TEXT_FILE = "extracted_text.txt"
+import os
 
-properties = Properties()
+
+class Properties:
+    OUTPUT_FOLDER = "data"
+    TEST_TASK = os.path.join("data", "test_task.pdf")
+    EXTRACTED_TEXT_FILE = os.path.join(OUTPUT_FOLDER, "extracted_text.txt")
